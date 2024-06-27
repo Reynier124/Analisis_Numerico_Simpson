@@ -1,2 +1,10 @@
 [run]
-omit = main.py
+omit =
+    */site-packages/*
+    */dist-packages/*
+    */python*.*/site-packages/*
+    */python*.*/dist-packages/*
+    */lib/python*/site-packages/*
+    */lib/python*/dist-packages/*
+    */python*.*/site-packages/!*
+    */python*.*/dist-packages/!*

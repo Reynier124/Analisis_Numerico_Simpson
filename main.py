@@ -1,6 +1,6 @@
 from colorama import init, Fore, Style
 from Metodo_simpson import Simpson
-from sympy import integrate, symbols
+from sympy import *
 
 # Inicializar colorama
 init(autoreset=True)
@@ -68,10 +68,12 @@ def main():
 
     print(Fore.GREEN + Style.BRIGHT + f"La integral aproximada es: {S}")
     print(Fore.RED + Style.BRIGHT + f"El residuo del método es: {R}")
-    print(Fore.GREEN + Style.BRIGHT + f"El resultado de la integral usando el método de Simpson es: {resultado}")
+    print(Fore.GREEN + Style.BRIGHT + f"El resultado de la integral aproximada sumada su residuo es: {resultado}")
     x = symbols('x')
     integral = integrate(f,(x,a,b))
-    print(Fore.RED + Style.BRIGHT + f"El error absoluto del método: {integral-S}")
+    error_absoluto = integral - S
+    error_porcentual = Abs((error_absoluto / integral) * 100)
+    print(Fore.RED + Style.BRIGHT + f"El error porcental del método es: {error_porcentual}%")
     simpson.graph(f)
 
 if __name__ == "__main__":

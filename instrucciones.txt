@@ -1,0 +1,63 @@
+Instrucciones básicas para utilizar la calculadora del método de Simpson
+
+Primero, es necesario instalar ciertas bibliotecas para asegurar que todo funcione correctamente. Ejecuta los siguientes comandos en la terminal desde la carpeta de la calculadora:
+
+Primer paso:
+python3 -m venv env
+
+Segundo paso:
+source env/bin/activate
+
+Tercer paso:
+./install.sh
+
+Con estos pasos completados, podrás usar la calculadora ejecutando el siguiente comando: ./boot.sh (Puede que no funcione si no estás en el entorno virtual).
+
+Esta calculadora utiliza la biblioteca SymPy para realizar cálculos matemáticos. A continuación, se explica cómo introducir correctamente tus funciones para que sean reconocidas:
+
+Guía para utilizar SymPy en expresiones matemáticas
+
+Funciones trigonométricas:
+SymPy proporciona funciones para todas las funciones trigonométricas estándar. Utiliza las siguientes funciones para calcular valores trigonométricos:
+
+Seno: sin(x)
+Coseno: cos(x)
+Tangente: tan(x)
+Cotangente: cot(x)
+Secante: sec(x)
+Cosecante: csc(x)
+Las funciones trigonométricas en SymPy trabajan con ángulos en radianes y no es posible trabajar de otra forma en esta calculadora
+
+Operaciones básicas:
+
+Multiplicación: Utiliza *. Por ejemplo, 2 * x representa 2x.
+División: Utiliza /. Por ejemplo, 1 / (x + 1) representa 1/(x + 1).
+Logaritmos:
+SymPy proporciona funciones para logaritmos naturales y logaritmos en base específica:
+
+Logaritmo natural: log(x) representa ln(x).
+Logaritmo en base b: log(x, b) representa log_b(x).
+Por ejemplo, para calcular el logaritmo natural de x, utiliza log(x).
+
+Notación científica:
+SymPy maneja la notación científica de manera automática. Por ejemplo, 1.23e-4 representa 1.23 × 10^-4 en SymPy.
+
+Constantes matemáticas:
+SymPy incluye las siguientes constantes matemáticas predefinidas:
+
+Pi: pi. Por ejemplo, pi representa el valor de π.
+Número de Euler: E. Por ejemplo, E representa el número de Euler, aproximadamente 2.718.
+Utiliza estas constantes en tus expresiones matemáticas según sea necesario.
+
+Números complejos:
+SymPy admite números complejos. Para definir un número complejo, utiliza I para representar la unidad imaginaria. Por ejemplo, 2 + 3*I representa el número complejo 2 + 3i.
+
+Funciones hiperbólicas:
+SymPy también proporciona funciones para funciones hiperbólicas estándar:
+
+Seno hiperbólico: sinh(x)
+Coseno hiperbólico: cosh(x)
+Tangente hiperbólica: tanh(x)
+Para calcular funciones hiperbólicas inversas, utiliza asinh(x), acosh(x), y atanh(x).
+
+*La utilización de funciones hiperbólicas puede llegar a dar problemas

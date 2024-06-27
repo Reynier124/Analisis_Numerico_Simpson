@@ -82,6 +82,7 @@ class Simpson():
             queue.put(('even', even_sum))
 
     def calculate(self,f ,aprox=4):
+        f = sympify(f)
         self.h = (self.b-self.a)/self.n
         if self.analize(f):
             return "Integral no valida"
