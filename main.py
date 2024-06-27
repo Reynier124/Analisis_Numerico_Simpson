@@ -57,11 +57,14 @@ def main():
     simpson.b = b
     if n is not None:
         simpson.n = n
-    
-    if aprox is not None:
-        resultado, S, R = simpson.calculate(f, aprox)
-    else:
-        resultado, S, R = simpson.calculate(f)
+    try:
+        if aprox is not None:
+            resultado, S, R = simpson.calculate(f, aprox)
+        else:
+            resultado, S, R = simpson.calculate(f)
+    except:
+        print(Fore.RED + Style.BRIGHT + f"La función no es valida en ese intervalo con el método simpson")
+        exit()
 
     print(Fore.GREEN + Style.BRIGHT + f"La integral aproximada es: {S}")
     print(Fore.RED + Style.BRIGHT + f"El residuo del método es: {R}")
